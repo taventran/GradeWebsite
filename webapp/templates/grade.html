@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %} 
-<h1>TEST</h1>
+{% for grade in grades_list %}
+    <h2><center>{{grade.class_name}}</center></h2>
+{% endfor %}
 {% endblock %}

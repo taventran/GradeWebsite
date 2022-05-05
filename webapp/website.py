@@ -22,15 +22,15 @@ def home():
                             'current_grade': form.current_grade.data,
                             'desired_grade': form.desired_grade.data,
                             'final_weight': form.final_weight.data,
-                            #'needed_grade': form.current_grade.data * (form.final_weight) / form.desired_grade.data
+                            'needed_grade': form.current_grade.data * (form.final_weight) / form.desired_grade.data
                             })
         return redirect(url_for('grades'))
                         
     return render_template('home.html', form = form)
 
-if __name__ == '__main__':
-    app.run(debug=True)
-
 @app.route('/grades/')
 def grades():
     return render_template('grade.html', grades_list=grades_list)
+
+if __name__ == '__main__':
+    app.run(debug=True)
