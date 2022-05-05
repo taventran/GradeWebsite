@@ -1,0 +1,24 @@
+{%extends "base.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test App</title>
+</head>
+<body>
+    {% block content %}
+
+    <h1><center>Grade Form</center></h1>
+    <form method="POST" action="/">
+        {{form.csrf_token}}
+        <h2><center>{{form.class_name.label}} {{form.class_name(size=20)}}</center></h2>
+        <h2><center>{{form.current_grade.label}} {{form.current_grade()}}</center></h2>
+        <h2><center>{{form.final_weight.label}} {{form.final_weight()}}</center></h2>
+        <h2><center>{{form.desired_grade.label}} {{form.desired_grade()}}</center></h2>
+        <h3>
+            <center><input type="submit" value="Calculate"></center>
+        </h3>
+    </form>
+
+    {% endblock %}
+</body>
+</html>
