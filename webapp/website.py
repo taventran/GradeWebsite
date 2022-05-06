@@ -4,7 +4,6 @@ from forms import GradeForm
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "dev"
 
-#app.config['SQLALCHEMY_DATABASE_URI']
 
 grades_list = []
 
