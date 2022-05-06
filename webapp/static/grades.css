@@ -1,0 +1,6 @@
+.container {
+    margin-top: 20px;
+    background-color: aliceblue;
+    border: solid rgb(0, 0, 0) 5px;
+    width: 250px;
+}

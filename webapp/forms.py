@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import (StringField, IntegerField, FloatField)
+from wtforms import (StringField, FloatField)
 from wtforms.validators import InputRequired, Length, NumberRange
 
 class GradeForm(FlaskForm):

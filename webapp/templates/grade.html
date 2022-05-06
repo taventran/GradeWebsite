@@ -1,7 +1,17 @@
 {% extends "base.html" %}
 
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='grades.css')}}">
+{% endblock %}
+
 {% block content %} 
 {% for grade in grades_list %}
-    <h2><center>{{grade.class_name}}</center></h2>
+    <div class = "container">
+        <h2><center>{{grade.class_name}}</center></h2>
+        <h5><center>Current Grade: {{grade.current_grade}}</center></h5>
+        <h5><center>Desired Grade: {{grade.desired_grade}}</center></h5>
+        <h5><center>Final Weight: {{grade.final_weight}}</center></h5>
+        <h5><center>Needed Grade: {{grade.needed_grade}}</center></h5>
+    </div>
 {% endfor %}
 {% endblock %}
